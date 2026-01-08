@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba") center/cover fixed;
+}
+
+header {
+  background: rgba(255,182,193,0.95);
+  text-align: center;
+  padding: 30px;
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 4em;
+}
+
+.animated-title {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+nav button {
+  background: hotpink;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.page {
+  display: none;
+  padding: 40px;
+  background: rgba(255,255,255,0.95);
+}
+
+.page.active { display: block; }
+
+.grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  width: 250px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.reviews {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.review {
+  background: pink;
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.contact-form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+footer {
+  background: pink;
+  text-align: center;
+  padding: 15px;
+}
+
+.paw {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  font-size: 40px;
+  animation: float 2s infinite alternate;
+}
+
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(-20px); }
+}
