@@ -1,9 +1,11 @@
+/* ===== BODY / FOND ===== */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: url("https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba") center/cover fixed;
+  background: url("images/background-chat.jpg") center/cover fixed;
 }
 
+/* ===== HEADER ===== */
 header {
   background: rgba(255,182,193,0.95);
   text-align: center;
@@ -20,10 +22,11 @@ header {
 }
 
 @keyframes bounce {
-  0%,100% { transform: translateY(0); }
+  0%, 100% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
 }
 
+/* ===== NAVIGATION ===== */
 nav button {
   background: hotpink;
   border: none;
@@ -32,16 +35,27 @@ nav button {
   margin: 5px;
   border-radius: 20px;
   cursor: pointer;
+  font-size: 1em;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+nav button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== PAGES ===== */
 .page {
   display: none;
   padding: 40px;
   background: rgba(255,255,255,0.95);
+  min-height: 80vh;
+  transition: opacity 0.3s ease-in-out;
 }
 
 .page.active { display: block; }
 
+/* ===== GRIDS ===== */
 .grid {
   display: flex;
   gap: 20px;
@@ -49,32 +63,57 @@ nav button {
   flex-wrap: wrap;
 }
 
+/* ===== CARDS PRODUITS ===== */
 .card {
   background: white;
   border-radius: 20px;
   padding: 15px;
   width: 250px;
   text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
 }
 
 .card img {
   width: 100%;
   border-radius: 15px;
+  object-fit: cover;
 }
 
+.card p {
+  font-weight: 500;
+  margin: 10px 0 5px 0;
+}
+
+.card span {
+  font-weight: 700;
+  color: hotpink;
+}
+
+/* ===== REVIEWS ===== */
 .reviews {
   display: flex;
   gap: 15px;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 
 .review {
   background: pink;
   padding: 15px;
   border-radius: 15px;
+  max-width: 250px;
+  text-align: center;
+  font-size: 0.9em;
 }
 
+/* ===== FORMULAIRE CONTACT ===== */
 .contact-form {
   max-width: 400px;
   margin: auto;
@@ -83,12 +122,36 @@ nav button {
   gap: 10px;
 }
 
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1em;
+}
+
+.contact-form button {
+  background: hotpink;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background: deeppink;
+}
+
+/* ===== FOOTER ===== */
 footer {
   background: pink;
   text-align: center;
   padding: 15px;
+  margin-top: 40px;
 }
 
+/* ===== PATTE ANIMÉE ===== */
 .paw {
   position: fixed;
   bottom: 10px;
@@ -100,4 +163,13 @@ footer {
 @keyframes float {
   from { transform: translateY(0); }
   to { transform: translateY(-20px); }
+}
+
+/* ===== TITRES ===== */
+.section-title {
+  text-align: center;
+  font-size: 2em;
+  margin: 40px 0 20px 0;
+  color: hotpink;
+  font-family: 'Pacifico', cursive;
 }
